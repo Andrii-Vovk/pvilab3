@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: 'Asap', sans-serif;
+  font-weight: bolder;
+  margin-bottom: 25px;
+  padding: 25px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(255, 255, 255);
+  font-size: x-large;
+
+}
+
+body {
+  background-color: #252220;
+}
+
+.tgreen {
+  empty-cells: show;
+  background-color: #769656;
+  color: #EEEED2;
+}
+
+.chessboard {
+  display: flex;
+  justify-content: center;  
+}
+
+.maintext {
+  color: aliceblue;
+  font-family: 'Asap', sans-serif;
+  font-size: larger;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3px;
+  margin: 3px;
+}
+
+table {
+  font-family: 'Asap', sans-serif;
+  border: 1px solid black;
+  table-layout: fixed;
+  overflow: hidden;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+th, td {
+  color: #769656;
+  empty-cells: show;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  background-color: #EEEED2;
+  position: relative;
+}
+
+.numposition, .letterposition {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.numposition {
+  left: 3px;
+}
+
+.letterposition {
+  right: 3px;
+  bottom: 3px;
+  padding-top: 50px;
+}
+
+img {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  padding-left: 4px;
+  padding-top: 3px;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #5a5a5a69;}
+
+.success {
+  color: white;
+  position: auto;
+  margin-top: 10px;
+}
+
+.innform {
+  padding: 10px;
+  margin: 25px;
+  border: 1px solid rgb(255, 255, 255);
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tmp {
+  text-align: right;
+}
