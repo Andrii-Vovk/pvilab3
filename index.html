@@ -12,20 +12,54 @@
     Головоломка #49757
   </header>
 
-
-  <div class="maintext innform">
-    <div class="tmp">
-      Логін:
-      <input type="text">
+  <input id="show" type="button" class="btn success" value="Показати форму" style="margin-bottom: 10px;">
+  <form id="signin" class="maintext innform" action="" method="get">
+    <div class="margins">
+      <label for="username">Ім'я користувача</label>
       <br>
-      Пароль:
-      <input type="text">
+      <input type="text" class="inp" id="username" name="username" placeholder="Username" required minlength="2"
+        max="15" pattern="[a-zA-Z]+">
+    </div>
+    <div class="margins">
+      <label for="pwd">Пароль</label>
       <br>
+      <input type="password" class="inp" id="pwd" name="pwd" placeholder="Password" required minlength="8"
+        maxlength="15">
     </div>
-    <div>
-      <button class="btn success">Підтвердити</button>
+    <div class="margins">
+      <label for="mail">Електронна пошта</label>
+      <br>
+      <input type="email" class="inp" id="mail" name="mail" placeholder="E-mail" required>
     </div>
-  </div>
+    <div class="margins">
+      <label for="rank">Ваш ранг:</label>
+      <Select id="rank" name="rank" class="inp" required>
+        <option value="novice">Новачок</option>
+        <option value="medium">Середній гравець</option>
+        <option value="veteran">Ветеран</option>
+        <option value="god">Народився з Ферзем в руці</option>
+      </Select>
+    </div>
+    <input type="hidden" id="puzzleid" name="puzzleid" value="49757">
+    <div class="margins">
+      <label for="region">Ваш регіон</label>
+      <div class="rad">
+      <input type="radio" id="Europe" name="region" value="Europe">
+      <label for="Europe">Європа</label>
+      <input type="radio" id="America" name="region" value="America">
+      <label for="America">Америка</label>
+      <input type="radio" id="Australia" name="region" value="Australia">
+      <label for="Australia">Австралія</label>
+      </div>
+    </div>
+    <div class="margins">
+      <label for="about">Про себе</label>
+      <br>
+      <textarea id="about" name="about" rows="4" cols="43"></textarea>
+    </div>
+    <input type="submit" value="Підтвердити" class="btn success">
+    <input id="hidebtn" type="button" value="Сховати форму" class="btn success">
+  </form>
 
 
   <div class="chessboard">
@@ -145,7 +179,7 @@
   </div>
   <p class="maintext">Правила шахів <a href="https://www.chess.com/learn-how-to-play-chess">тут</a></p>
   <p class="maintext">Джерело головоломки <a href="https://www.chess.com/puzzles/problem/49757">тут</a></p>
-
+  <script src="app.js" charset="utf-8"></script>
 </body>
 
 </html>

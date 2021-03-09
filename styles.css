@@ -100,6 +100,11 @@ img {
   color: white;
   position: auto;
   margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .innform {
@@ -110,8 +115,40 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 .tmp {
   text-align: right;
+}
+
+.inp {
+  height: 23px;
+  border: 1px solid #252220;
+  background-color: #252220;
+  border-bottom-color: white;
+  font-size: 16px;
+  color: white;
+  margin-top: 0.3em;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.margins {
+  margin-top: 0.3em;
+}
+
+.rad {
+  text-align: center;
+}
+
+textarea {
+  border: 1px solid white;
+  border-radius: 4px;
 }
