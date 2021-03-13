@@ -23,13 +23,17 @@ function fsubmit(event) {
     event.preventDefault();
     var usrReg = new RegExp("[a-zA-Z]+");
     username = document.getElementById("username").value;
-    console.log(username.length)
+
     if (username.length == 0) {
         alert("Enter username");
         return;
     }
     else if (username.length > 15 || username.length < 2) {
         alert("Username too long or too short");
+        return;
+    }
+    else if(!usrReg.test(username)) {
+        alert("Wrong format");
         return;
     }
 
