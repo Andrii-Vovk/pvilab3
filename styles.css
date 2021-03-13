@@ -28,7 +28,7 @@ body {
 }
 
 .chessboard {
-  display: flex;
+  display: inline-block;
   justify-content: center;  
 }
 
@@ -79,9 +79,8 @@ th, td {
 
 img {
   z-index: 2;
-  position: absolute;
+  position: relative;
   top: 0;
-  padding-left: 4px;
   padding-top: 3px;
 }
 
@@ -151,4 +150,18 @@ input:focus::placeholder {
 textarea {
   border: 1px solid white;
   border-radius: 4px;
+}
+
+#figchart {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 600px;
+  height: 400px;
+}
+
+.container {
+  display: block;
+  text-align: center;
 }

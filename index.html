@@ -12,28 +12,31 @@
     Головоломка #49757
   </header>
 
+  <div id="timerdiv">
+    <button id="starttimer" class="btn success">Старт</button>
+    <div id="timer" class="maintext">00:00</div>
+  </div>
+
   <input id="show" type="button" class="btn success" value="Показати форму" style="margin-bottom: 10px;">
   <form id="signin" class="maintext innform" action="" method="get">
     <div class="margins">
       <label for="username">Ім'я користувача</label>
       <br>
-      <input type="text" class="inp" id="username" name="username" placeholder="Username" required minlength="2"
-        max="15" pattern="[a-zA-Z]+">
+      <input type="text" class="inp" id="username" name="username" placeholder="Username">
     </div>
     <div class="margins">
       <label for="pwd">Пароль</label>
       <br>
-      <input type="password" class="inp" id="pwd" name="pwd" placeholder="Password" required minlength="8"
-        maxlength="15">
+      <input type="password" class="inp" id="pwd" name="pwd" placeholder="Password">
     </div>
     <div class="margins">
       <label for="mail">Електронна пошта</label>
       <br>
-      <input type="email" class="inp" id="mail" name="mail" placeholder="E-mail" required>
+      <input type="text" class="inp" id="mail" name="mail" placeholder="E-mail">
     </div>
     <div class="margins">
       <label for="rank">Ваш ранг:</label>
-      <Select id="rank" name="rank" class="inp" required>
+      <Select id="rank" name="rank" class="inp">
         <option value="novice">Новачок</option>
         <option value="medium">Середній гравець</option>
         <option value="veteran">Ветеран</option>
@@ -57,11 +60,11 @@
       <br>
       <textarea id="about" name="about" rows="4" cols="43"></textarea>
     </div>
-    <input type="submit" value="Підтвердити" class="btn success">
+    <input id="sbutton" type="submit" value="Підтвердити" class="btn success">
     <input id="hidebtn" type="button" value="Сховати форму" class="btn success">
   </form>
 
-
+<div class="container">
   <div class="chessboard">
     <table>
       <tr>
@@ -177,8 +180,17 @@
       </tr>
     </table>
   </div>
+
+  <div class="chessboard" style="margin: 30px;"></div>
+
+  <div id="figchart">
+  <canvas id="popChart" width="600" height="400"></canvas>
+  </div>
+
+</div>
   <p class="maintext">Правила шахів <a href="https://www.chess.com/learn-how-to-play-chess">тут</a></p>
   <p class="maintext">Джерело головоломки <a href="https://www.chess.com/puzzles/problem/49757">тут</a></p>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="app.js" charset="utf-8"></script>
 </body>
 
